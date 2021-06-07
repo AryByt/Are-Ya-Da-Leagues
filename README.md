@@ -18,7 +18,43 @@ https://whimsical.com/9FhZR5a7kWTsnKYEVHMKQ9
 https://whimsical.com/worldofsoccer-9FhZR5a7kWTsnKYEVHMKQ9
 
 ## API and Data Sample
-
+```JSON
+{
+    "records": [
+        {
+            "id": "rec61Hio5J06z5j5X",
+            "fields": {
+                "standings": "3rd",
+                "ratings": 6,
+                "website": "https://www.fenerbahce.org/\n",
+                "info": "Fenerbahçe was founded over a century ago in the district of Kadiköy in Istanbul. The founders were Mr. Nurizade Ziya Songülen, Mr. Ayetullah and Mr. ...",
+                "leagues": "Super Lig",
+                "results": "W-L-W-W-D",
+                "teams": "Fenerbahce",
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Fenerbah%C3%A7e.svg/1200px-Fenerbah%C3%A7e.svg.png",
+                "comments": "played horrible last game, i can't believe they drew with such a weak side.\n",
+                "players": "Ozan Tufan, Altay Bayandir, Mesut Ozil,\n"
+            },
+            "createdTime": "2021-06-07T13:20:16.000Z"
+        },
+        {
+            "id": "recXcThDo0Ew1NrST",
+            "fields": {
+                "standings": "2nd",
+                "ratings": 3,
+                "website": "https://www.galatasaray.org/anasayfa\n",
+                "info": "Galatasaray Spor Kulübü is a pioneer club in Turkish sports history and this characteristic is, without a doubt, comes from the legacy of Galatasaray ...",
+                "leagues": "Super Lig",
+                "results": "W-W-W-W-W",
+                "teams": "Galatasaray",
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/31/Galatasaray_Star_Logo.svg/1200px-Galatasaray_Star_Logo.svg.png",
+                "comments": "What a horrible team\n",
+                "players": "Radamel Falcao, Fernando Muslera, Arda Turan\n"
+            },
+            "createdTime": "2021-06-07T13:36:03.000Z"
+        },
+       
+ ```
 
 #### MVP 
 - User be able to add information.
