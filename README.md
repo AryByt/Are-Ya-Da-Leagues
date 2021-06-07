@@ -6,7 +6,7 @@ Are Ya Da Leagues
 
 ## Project Description
 
-You can view teams and their last few games. You can see some information about the club.You can aslo add your soccer team and league. You discussing how your team is doing. It also 
+You can view teams and their last few games. You can see some information about the clubs and their official websites.You can aslo add your soccer team. You discussing how your team is doing and talk about everything soccer.
 
 ## Wireframes
 
