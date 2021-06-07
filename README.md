@@ -74,13 +74,13 @@ https://whimsical.com/worldofsoccer-9FhZR5a7kWTsnKYEVHMKQ9
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|June 7| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|June 8| Project Approval | Incomplete
+|June 8| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|June 9| Pseudocode / actual code | Incomplete
+|June 10| Initial Clickable Model  | Incomplete
+|June 11| MVP | Incomplete
+|June 14| Presentations | Incomplete
 
 ## Timeframes
 
