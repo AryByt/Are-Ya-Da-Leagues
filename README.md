@@ -15,6 +15,7 @@ https://wireframe.cc/Se2WxM
 
 ## Component Hierarchy
 https://whimsical.com/9FhZR5a7kWTsnKYEVHMKQ9
+https://whimsical.com/worldofsoccer-9FhZR5a7kWTsnKYEVHMKQ9
 
 ## API and Data Sample
 
