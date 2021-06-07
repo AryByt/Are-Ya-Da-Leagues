@@ -65,10 +65,10 @@ https://whimsical.com/9FhZR5a7kWTsnKYEVHMKQ9
 | Adding/Displaying data from user | H | 3hrs| 3hrs |  |
 | CSS | H | 3hrs| 3hrs |  |
 | Tailwind CSS | H | 3hrs| 3hrs |  |
-| Deleting Data | L | 3hrs| 2.5hrs | 2.5hrs |
-| Adding buttons to delete | L | 1hrs| 1hrs | 2.5hrs |
-| Updating teams| L | 3hrs| 2.5hrs | 2.5hrs |
-| update button| L | 2hrs| 2.5hrs | 2.5hrs |
+| Deleting Data | L | 3hrs| 2.5hrs |  |
+| Adding buttons to delete | L | 1hrs| 1hrs |  |
+| Updating teams| L | 3hrs| 2.5hrs | |
+| update button| L | 2hrs| 2.5hrs |  |
 | Total | H | 47hrs| 45hrs | hrs |
 
 ## SWOT Analysis
