@@ -12,25 +12,26 @@ import Navbar from './components/Navbar';
       {/* creating a TeamList component*/}
       {/* creating a AddingTeams component*/}
       {/* creating a Leagues component*/}
+      {/* adding links and navbar*/}
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Route path="/">
-        <div>Home</div>
+      <Route exact path="/">
+        <div></div>
       </Route>
-      <Route path="/leagues">
-        <div>Leagues</div>
+      <Route exact path="/leagues">
+        <div></div>
       </Route>
-      <Route path="/teams">
-        <div>Teams</div>
+      <Route exact path="/teams">
+        <div></div>
       </Route>
       <Route path="/teams/team:id">
-        <div>Team</div>
+        <div></div>
       </Route>
-      <Route exact path="/edit/leagues/team/create">
-        <div>AddTeam</div>
+      <Route exact path="/create/leagues/team/">
+        <div></div>
       </Route>
       <Footer />
     </div>
