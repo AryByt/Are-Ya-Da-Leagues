@@ -11,8 +11,9 @@ const config = {
 export const getLeagues = async () => {
   try {
     const res = await axios.get(baseURL, config)
-    return res.data
+    return res.data.records
   } catch (error){
   console.log(error)
 }
 };
+

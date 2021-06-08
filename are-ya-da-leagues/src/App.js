@@ -1,8 +1,12 @@
 import { Route, Router } from 'react-router';
 import './App.css';
 import Footer from './components/Footer';
+import Leagues from './components/Leagues';
 import Navbar from './components/Navbar';
-import {getLeagues} from "./services/api"
+import TeamList from './components/TeamList';
+import { getLeagues } from "./services/api"
+import Teams from './components/Teams';
+
 
  {/* Adding some routes and creating components */}
       {/* Create a components folder */}
@@ -16,7 +20,6 @@ import {getLeagues} from "./services/api"
       {/* adding links and navbar*/}
 
 function App() {
-  getLeagues()
   return (
     <div className="App">
       <Navbar />
@@ -24,15 +27,14 @@ function App() {
         <div></div>
       </Route>
       <Route exact path="/leagues">
-        <div></div>
       </Route>
       <Route exact path="/teams">
-        <div></div>
+      <TeamList/>
       </Route>
-      <Route path="/teams/team:id">
-        <div></div>
+      <Route exact path="/teams/team:id">
+        <Teams/>
       </Route>
-      <Route exact path="/create/leagues/team/">
+      <Route path="/create/leagues/team/">
         <div></div>
       </Route>
       <Footer />

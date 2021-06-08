@@ -18,9 +18,6 @@ export default function Navbar() {
           <li>
             <Link to="/create/leagues/team/">Create</Link>
           </li>
-          <li>
-            <Link to="/teams/team:id">Leagues</Link>
-          </li>
         </ul>
       </nav>
     </div>
