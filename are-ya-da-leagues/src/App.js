@@ -2,6 +2,7 @@ import { Route, Router } from 'react-router';
 import './App.css';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import {getLeagues} from "./services/api"
 
  {/* Adding some routes and creating components */}
       {/* Create a components folder */}
@@ -15,6 +16,7 @@ import Navbar from './components/Navbar';
       {/* adding links and navbar*/}
 
 function App() {
+  getLeagues()
   return (
     <div className="App">
       <Navbar />
