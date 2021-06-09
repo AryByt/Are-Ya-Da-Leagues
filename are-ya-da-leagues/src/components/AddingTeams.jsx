@@ -25,6 +25,7 @@ export default function AddingTeams() {
     e.preventDefault();
     const res = await addTeams(input);
     console.log(res);
+    return res;
   };
 
   return (
