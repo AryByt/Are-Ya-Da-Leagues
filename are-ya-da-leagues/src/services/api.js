@@ -10,27 +10,33 @@ const config = {
 
 export const getLeagues = async () => {
   try {
-    const res = await axios.get(baseURL, config)
-    return res.data.records
-  } catch (error){
-  console.log(error)
-}
+    const res = await axios.get(baseURL, config);
+    return res.data.records;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getTeam = async (id) => {
   try {
-    const res = await axios.get(`${baseURL}/${id}`, config)
-    return res.data
+    const res = await axios.get(`${baseURL}/${id}`, config);
+    return res.data;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 };
 
-export const addingTeams = async (form) => {
+export const addTeams = async (form) => {
   try {
-    const res = await axios.get(`${baseURL}`,{fields:form},config)
-    return res.data
+    const res = await axios.post(
+      `${baseURL}`,
+      {
+        fields: form,
+      },
+      config
+    );
+    return res.data;
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
-}
+};

@@ -1,31 +1,41 @@
-import React from 'react'
-import {useState} from "react"
-
+import React from "react";
+import { useState } from "react";
+import { addTeams } from "../services/api";
 
 const defaultObj = {
-  name: "",
+  leagues: "",
+  teams: "",
   logo: "",
   info: "",
 };
 
 export default function AddingTeams() {
-  const [input, setInput] = useState(defaultObj)
+  const [input, setInput] = useState(defaultObj);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value)
-    setInput(prevInput => ({
+
+    setInput((prevInput) => ({
       ...prevInput,
       [name]: value,
-    }))
-  }
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await addTeams(input);
+    console.log(res);
+  };
 
   return (
     <div>
       <h2>Create a new Team</h2>
-      <form onChange={handleChange}>
+      <form onChange={handleChange} onSubmit={handleSubmit}>
+        <label>League name</label>
+        <input type="text" name="leagues" />
+        <br />
         <label>Team Name</label>
-        <input type="text" name="name"/>
+        <input type="text" name="teams" />
         <br />
         <label>Team logo</label>
         <input type="text" name="logo" />
@@ -36,5 +46,5 @@ export default function AddingTeams() {
         <button type="submit">Submit</button>
       </form>
     </div>
-  )
+  );
 }
