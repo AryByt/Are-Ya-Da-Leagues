@@ -16,7 +16,7 @@ export default function Leagues() {
       {leagues.map((league) => {
         return (
           <div key={league.id}>
-            <Link to={`/teams/team${league.id}`}>{league.fields.league}</Link>
+            <Link to={`/teams/${league.id}`}>{league.fields.league}</Link>
           </div>
         );
       })}

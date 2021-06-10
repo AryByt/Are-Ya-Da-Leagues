@@ -62,6 +62,8 @@ function App() {
       <Route path="/edit/team/:id">
         <EditTeams />
       </Route>
+      <Route path="/team/:id"></Route>
+
       <Footer />
     </div>
   );

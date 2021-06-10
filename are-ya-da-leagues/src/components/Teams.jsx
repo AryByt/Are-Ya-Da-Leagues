@@ -30,16 +30,24 @@ export default function Teams() {
 
   return (
     <div>
+      <h2>Rating:</h2>
+      <p>{team.fields?.rating}</p>
       <h1>Here's the Team</h1>
       {team.fields?.info}
       <img src={team.fields?.logo} />
+      <h3 className="text-blue-600 text-2xl">{team.fields?.standing}</h3>
+      <h4>Star Players : {team.fields?.players}</h4>
       <p>{team.fields?.results}</p>
       <h1>Comments:</h1>
       <p>{team.fields?.comments}</p>
       <h2>Rating:</h2>
       <p>{team.fields?.rating}</p>
 
-      <Link to={`/edit/team/${team.id}`}>Fix Your Team</Link>
+      <Link to={`/edit/team/${team.id}`}>
+        <br />
+        Fix Your Team
+      </Link>
+      <br />
       <button onClick={handleDelete}>Delete</button>
     </div>
   );

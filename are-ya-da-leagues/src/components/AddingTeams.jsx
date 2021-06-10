@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { addTeams } from "../services/api";
 import { useHistory } from "react-router-dom";
+import StarRatingComponent from "react-star-rating-component";
 
 const defaultObj = {
   league: "",
@@ -49,8 +50,14 @@ export default function AddingTeams() {
         <label>Team info</label>
         <input type="text" name="info" />
         <br />
+        <label>standing</label>
+        <input type="text" name="standings" />
+        <br />
+        <label>rate your team</label>
+        <input type="number" name="rating" />
+        <br />
         <label>
-          comments
+          Comments
           <textarea name="comments" />
         </label>
         <br />

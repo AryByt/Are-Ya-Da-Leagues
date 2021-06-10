@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { editTeam, getTeam } from "../services/api";
+import { editTeam, getLeagues, getTeam } from "../services/api";
 
 export default function EditTeams() {
   const history = useHistory();
@@ -63,6 +63,9 @@ export default function EditTeams() {
           <br />
           <label>Team info</label>
           <input type="text" name="info" value={input.info} />
+          <br />
+          <label>Rating</label>
+          <input type="number" name="rating" value={input.rating} />
           <br />
           <label>Comments</label>
           <input type="text" name="comments" value={input.comments} />
