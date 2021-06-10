@@ -22,7 +22,7 @@ export const getTeam = async (id) => {
     const res = await axios.get(`${baseURL}/${id}`, config);
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -37,6 +37,23 @@ export const addTeams = async (form) => {
     );
     return res.data;
   } catch (error) {
-    console.log(error);
+    console.error(error);
+  }
+};
+
+export const editTeam = async (form, id) => {
+  try {
+    const res = await axios.put(`${baseURL}/${id}`, { fields: form }, config);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+export const deleteTeam = async (id) => {
+  try {
+    const res = await axios.delete(`${baseURL}/${id}`, config);
+    return res.data;
+  } catch (error) {
+    console.error(error);
   }
 };

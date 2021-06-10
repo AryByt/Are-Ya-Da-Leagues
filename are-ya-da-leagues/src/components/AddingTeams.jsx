@@ -1,16 +1,22 @@
 import React from "react";
 import { useState } from "react";
 import { addTeams } from "../services/api";
+import { useHistory } from "react-router-dom";
 
 const defaultObj = {
-  leagues: "",
-  teams: "",
+  league: "",
+  team: "",
   logo: "",
   info: "",
+  rating: "",
+  comments: "Your comments:",
+  standing: "",
+  results: "",
 };
 
 export default function AddingTeams() {
   const [input, setInput] = useState(defaultObj);
+  const history = useHistory();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,26 +29,30 @@ export default function AddingTeams() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await addTeams(input);
-    console.log(res);
-    return res;
+    await addTeams(input);
+    history.push("/teams");
   };
 
   return (
     <div>
-      <h2>Create a new Team</h2>
+      <h2>Create a new {input.team}</h2>
       <form onChange={handleChange} onSubmit={handleSubmit}>
         <label>League name</label>
-        <input type="text" name="leagues" />
+        <input type="text" name="league" />
         <br />
         <label>Team Name</label>
-        <input type="text" name="teams" />
+        <input type="text" name="team" />
         <br />
         <label>Team logo</label>
         <input type="text" name="logo" />
         <br />
         <label>Team info</label>
         <input type="text" name="info" />
+        <br />
+        <label>
+          comments
+          <textarea name="comments" />
+        </label>
         <br />
         <button type="submit">Submit</button>
       </form>
