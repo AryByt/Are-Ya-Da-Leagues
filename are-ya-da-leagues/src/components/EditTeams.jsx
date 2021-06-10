@@ -1,14 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { addTeams } from "../services/api";
+import { getTeam } from "../services/api";
 export default function EditTeams() {
   const [team, setTeam] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await addTeams(id);
+      const res = await getTeam(id);
       setTeam(res);
     };
     fetchData();
@@ -16,8 +16,8 @@ export default function EditTeams() {
   return (
     <div>
       <div>
-        <h2>Create a new Team</h2>
-        {team.fields && (
+        <h2>Edit team {team.fields?.team}</h2>
+        {team && (
           <form>
             <label>League name</label>
             <input type="text" name="leagues" />
