@@ -17,7 +17,7 @@ export default function Teams() {
       setTeam(res);
     };
     fetch();
-  }, []);
+  }, [id]);
 
   const handleDelete = async () => {
     const res = await deleteTeam(id);
@@ -53,6 +53,7 @@ export default function Teams() {
       <p>{team.fields?.comments}</p>
       <h2>Rating:</h2>
       <div>
+        //eslint-disable-next-line
         <StarPicker
           className=""
           onChange={onChange}
