@@ -12,7 +12,7 @@ export default function TeamList() {
     getData();
   }, []);
   return (
-    <div>
+    <div className="bg-gray-400 flex-column wh-full">
       {teams.map((team) => {
         return (
           <div className="font-bold" key={team.id}>

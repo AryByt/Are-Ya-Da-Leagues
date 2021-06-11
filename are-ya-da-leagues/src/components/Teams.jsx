@@ -24,29 +24,21 @@ export default function Teams() {
     history.push("/teams");
   };
 
-  // const onChange = (value, name) => {
-  //   setTeam((prevValues) => ({ ...prevValues, [name]: value }));
-  // };
-
   if (!team.fields) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div>
-      <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+    <div className="bg-red-600 ">
+      <div>
         <h1>
           Here's the Team
           {team.fields?.info}
           <img className="bg-yellow-50" src={team.fields?.logo} alt="logo" />
         </h1>
-        <p className="p-6 max-w-sm mx-auto bg-red-300 rounded-xl shadow-md flex items-center space-x-4">
-          {team.fields?.standing}
-        </p>
+        <p>{team.fields?.standing}</p>
       </div>
-      <h4 className="p-6 max-w-sm mx-auto bg-pink-300 rounded-xl shadow-md flex items-center space-x-4">
-        Star Players : {team.fields?.players}
-      </h4>
+      <h1>Star Players : {team.fields?.players}</h1>
       <p>{team.fields?.results}</p>
       <h1>Comments:</h1>
       <p>{team.fields?.comments}</p>

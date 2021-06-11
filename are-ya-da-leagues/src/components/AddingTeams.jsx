@@ -35,33 +35,62 @@ export default function AddingTeams() {
 
   return (
     <div>
-      <h2>Create a new {input.team}</h2>
-      <form onChange={handleChange} onSubmit={handleSubmit}>
-        <label>League name</label>
-        <input type="text" name="league" />
-        <br />
-        <label>Team Name</label>
-        <input type="text" name="team" />
-        <br />
-        <label>Team logo</label>
-        <input type="text" name="logo" />
-        <br />
-        <label>standing</label>
-        <input type="text" name="standing" />
-        <br />
-        <label>Team info</label>
-        <input type="text" name="info" />
-        <br />
-        <label>Who are your Favorite Players?</label>
-        <input type="text" name="players" />
-        <br />
-        <label>Comments:</label>
-        <textarea type="text" name="comments"></textarea>
-        <label>RATE </label>
-        <input type="number" name="rating" />
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+      <div className="">
+        <h2 className="flex-column justify-items-center">Create a Team!</h2>
+        <h1 className="flex text-green-900">That's some team name :</h1>
+        <p>{input.team}</p>
+
+        <div className="flex justify-center items-center ">
+          <form
+            onChange={handleChange}
+            onSubmit={handleSubmit}
+            className="bg-gray-100 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          >
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              League name
+            </label>
+            <input type="text" name="league" />
+
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Team Name
+            </label>
+            <input type="text" name="team" />
+
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Team logo
+            </label>
+            <input type="text" name="logo" />
+
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              standing
+            </label>
+            <input type="text" name="standing" />
+
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Team info
+            </label>
+            <input type="text" name="info" />
+
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Who are your Favorite Players?
+            </label>
+            <input type="text" name="players" />
+
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              Comments:
+            </label>
+            <textarea type="text" name="comments"></textarea>
+            <label className="block text-gray-700 text-sm font-bold mb-2">
+              RATE{" "}
+            </label>
+            <input type="number" name="rating" />
+            <br />
+            <button type="submit" className="text-red-300 rounded-full">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

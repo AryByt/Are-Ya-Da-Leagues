@@ -8,11 +8,32 @@ import AddingTeams from "./components/AddingTeams";
 import EditTeams from "./components/EditTeams";
 import Home from "./components/Home";
 import { Switch } from "react-router-dom";
+import Dropdown from "./components/Dropdown";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+  useEffect(() => {
+    const hideMenu = () => {
+      if (window.innerWidth > 768 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("resize", hideMenu);
+
+    return () => {
+      window.removeEventListener("resize", hideMenu);
+    };
+  });
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar toggle={toggle} />
+      <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/leagues">
           <Leagues />
