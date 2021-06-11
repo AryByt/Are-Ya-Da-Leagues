@@ -2,7 +2,6 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import StarPicker from "react-star-picker";
 
 export default function Teams() {
   const history = useHistory();
@@ -52,16 +51,6 @@ export default function Teams() {
       <h1>Comments:</h1>
       <p>{team.fields?.comments}</p>
       <h2>Rating:</h2>
-      <div>
-        //eslint-disable-next-line
-        <StarPicker
-          className=""
-          onChange={onChange}
-          value={team.fields?.rating}
-          name="rating"
-          numberStars={10}
-        />
-      </div>
       <Link to={`/edit/team/${team.id}`}>
         <br />
         Fix Your Team
