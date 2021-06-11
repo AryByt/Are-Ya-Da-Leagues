@@ -4,10 +4,10 @@ import Footer from "./components/Footer";
 import Leagues from "./components/Leagues";
 import Navbar from "./components/Navbar";
 import TeamList from "./components/TeamList";
-import getLeagues from "./services/api";
 import Teams from "./components/Teams";
 import AddingTeams from "./components/AddingTeams";
 import EditTeams from "./components/EditTeams";
+import Home from "./components/Home";
 
 {
   /* Adding some routes and creating components */
@@ -44,9 +44,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Route exact path="/">
-        <div></div>
-      </Route>
+      <Route exact path="/"></Route>
+      <Home />
       <Route path="/leagues">
         <Leagues />
       </Route>
@@ -63,7 +62,6 @@ function App() {
         <EditTeams />
       </Route>
       <Route path="/team/:id"></Route>
-
       <Footer />
     </div>
   );

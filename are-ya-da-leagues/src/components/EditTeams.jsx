@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { editTeam, getLeagues, getTeam } from "../services/api";
+import { editTeam, getTeam } from "../services/api";
 
 export default function EditTeams() {
   const history = useHistory();
@@ -10,6 +10,10 @@ export default function EditTeams() {
     team: "",
     logo: "",
     info: "",
+    comments: "Your comments:",
+    standing: "",
+    results: "",
+    players: "",
   });
 
   const { id } = useParams();
@@ -22,23 +26,24 @@ export default function EditTeams() {
         team: res.fields.team,
         logo: res.fields.logo,
         info: res.fields.info,
-        rating: res.fields.rating,
         comments: res.fields.comments,
+        results: res.fields.results,
+        players: res.fields.players,
+        standing: res.fields.standing,
       });
     };
     fetchData();
   }, []);
 
   const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInput((prevState) => {
-      return {
-        ...prevState,
-        [name]: value,
-      };
-    });
+    const { name, value } = e.target;
+
+    setInput((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await editTeam(input, id);
@@ -48,7 +53,9 @@ export default function EditTeams() {
   return (
     <div>
       <div>
-        <h2>Edit team {input.team}</h2>
+        <h2 class="bg-gradient-to-r from-green-400 to-blue-500 focus:from-pink-500 focus:to-yellow-500">
+          Edit team {input.team}
+        </h2>
         <form onChange={handleChange} onSubmit={handleSubmit}>
           <label>League name</label>
           <input type="text" name="league" value={input.league} />
@@ -64,13 +71,18 @@ export default function EditTeams() {
           <label>Team info</label>
           <input type="text" name="info" value={input.info} />
           <br />
-          <label>Rating</label>
-          <input type="number" name="rating" value={input.rating} />
-          <br />
           <label>Comments</label>
-          <input type="text" name="comments" value={input.comments} />
+          <input type="text" name="info" value={input.info} />
           <br />
-          <button type="submit">edit</button>
+          <label>Results</label>
+          <input type="text" name="results" value={input.results} />
+          <br />
+          <button
+            type="submit"
+            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+          >
+            edit
+          </button>
         </form>
       </div>
     </div>

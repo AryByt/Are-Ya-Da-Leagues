@@ -15,7 +15,7 @@ export default function TeamList() {
     <div>
       {teams.map((team) => {
         return (
-          <div key={team.id}>
+          <div className="font-bold" key={team.id}>
             <Link to={`/teams/${team.id}`}>{team.fields.team}</Link>
           </div>
         );

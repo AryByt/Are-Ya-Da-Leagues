@@ -2,17 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { addTeams } from "../services/api";
 import { useHistory } from "react-router-dom";
-import StarRatingComponent from "react-star-rating-component";
 
 const defaultObj = {
   league: "",
   team: "",
   logo: "",
   info: "",
-  rating: "",
   comments: "Your comments:",
   standing: "",
   results: "",
+  players: "",
+  rating: "",
 };
 
 export default function AddingTeams() {
@@ -27,7 +27,6 @@ export default function AddingTeams() {
       [name]: value,
     }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     await addTeams(input);
@@ -47,19 +46,19 @@ export default function AddingTeams() {
         <label>Team logo</label>
         <input type="text" name="logo" />
         <br />
+        <label>standing</label>
+        <input type="text" name="standing" />
+        <br />
         <label>Team info</label>
         <input type="text" name="info" />
         <br />
-        <label>standing</label>
-        <input type="text" name="standings" />
+        <label>Who are your Favorite Players?</label>
+        <input type="text" name="players" />
         <br />
-        <label>rate your team</label>
+        <label>Comments:</label>
+        <textarea type="text" name="comments"></textarea>
+        <label>RATE </label>
         <input type="number" name="rating" />
-        <br />
-        <label>
-          Comments
-          <textarea name="comments" />
-        </label>
         <br />
         <button type="submit">Submit</button>
       </form>
