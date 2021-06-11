@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Home() {
   const [readMore, setReadMore] = useState(false);
   const extraContent = (
-    <div className="md: mb-10 md:mb-0 text-1xl flex">
+    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md items-center space-x-4 md: mb-10 md:mb-0 text-1xl flex">
       <p>
         Soccer is a game played by two teams with 11 players each on a field
         with a goal for each team. It’s the most popular team sport on the

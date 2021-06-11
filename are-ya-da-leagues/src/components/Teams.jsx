@@ -35,21 +35,26 @@ export default function Teams() {
 
   return (
     <div>
-      <h2>Rating:</h2>
-      <p>{team.fields?.rating}</p>
-      <h1 className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-        Here's the Team
-      </h1>
-      {team.fields?.info}
-      <img className="h-50 w-60" src={team.fields?.logo} />
-      <h3 className="text-blue-600 text-2xl ">{team.fields?.standing}</h3>
-      <h4>Star Players : {team.fields?.players}</h4>
+      <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+        <h1>
+          Here's the Team
+          {team.fields?.info}
+          <img className="bg-yellow-50" src={team.fields?.logo} alt="logo" />
+        </h1>
+        <p className="p-6 max-w-sm mx-auto bg-red-300 rounded-xl shadow-md flex items-center space-x-4">
+          {team.fields?.standing}
+        </p>
+      </div>
+      <h4 className="p-6 max-w-sm mx-auto bg-pink-300 rounded-xl shadow-md flex items-center space-x-4">
+        Star Players : {team.fields?.players}
+      </h4>
       <p>{team.fields?.results}</p>
       <h1>Comments:</h1>
       <p>{team.fields?.comments}</p>
       <h2>Rating:</h2>
       <div>
         <StarPicker
+          className=""
           onChange={onChange}
           value={team.fields?.rating}
           name="rating"
