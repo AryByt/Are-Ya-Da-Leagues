@@ -31,6 +31,7 @@ function App() {
         </Route>
         <Route path="/team/:id"></Route>
         <Home />
+        <Route path="/"></Route>
       </Switch>
       <Footer />
     </div>
