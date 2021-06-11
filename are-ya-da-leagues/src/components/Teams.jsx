@@ -24,9 +24,9 @@ export default function Teams() {
     history.push("/teams");
   };
 
-  const onChange = (value, name) => {
-    setTeam((prevValues) => ({ ...prevValues, [name]: value }));
-  };
+  // const onChange = (value, name) => {
+  //   setTeam((prevValues) => ({ ...prevValues, [name]: value }));
+  // };
 
   if (!team.fields) {
     return <div>Loading...</div>;
