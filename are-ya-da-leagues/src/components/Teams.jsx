@@ -2,7 +2,6 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-import StarPicker from "react-star-picker";
 
 export default function Teams() {
   const history = useHistory();
@@ -13,19 +12,14 @@ export default function Teams() {
   useEffect(() => {
     const fetch = async () => {
       const res = await getTeam(id);
-      console.log(res);
       setTeam(res);
     };
     fetch();
   }, [id]);
 
   const handleDelete = async () => {
-    const res = await deleteTeam(id);
-    console.log(res);
+    await deleteTeam(id);
     history.push("/teams");
-  };
-  const onChange = (value, name) => {
-    setTeam((prevValues) => ({ ...prevValues, [name]: value }));
   };
 
   if (!team.fields) {
@@ -33,35 +27,25 @@ export default function Teams() {
   }
 
   return (
-    <div className="bg-red-600 ">
+    <div className="">
+      {team.fields?.info}
+      <img
+        className="bg-red-400"
+        width="400"
+        height="500"
+        src={team.fields?.logo}
+        alt="logo"
+      />
+      {team.fields?.standing}
+      {team.fields?.players}
+      {team.fields?.results}
+      {team.fields?.comments}
+
       <div>
-        <h1>
-          Here's the Team
-          {team.fields?.info}
-          <img className="bg-yellow-50" src={team.fields?.logo} alt="logo" />
-          // eslint-disable-next-line react/jsx-no-comment-textnodes
-          <div>
-            <StarPicker
-              className=""
-              onChange={onChange}
-              value={team.fields?.rating}
-              name="rating"
-              numberStars={10}
-            />
-          </div>
-        </h1>
-        <p>{team.fields?.standing}</p>
-      </div>
-      <h1>Star Players : {team.fields?.players}</h1>
-      <p>{team.fields?.results}</p>
-      <h1>Comments:</h1>
-      <p>{team.fields?.comments}</p>
-      <Link to={`/edit/team/${team.id}`}>
+        <Link to={`/edit/team/${team.id}`}>Fix Your Team</Link>
         <br />
-        Fix Your Team
-      </Link>
-      <br />
-      <button onClick={handleDelete}>Delete</button>
+        <button onClick={handleDelete}>Delete</button>
+      </div>
     </div>
   );
 }

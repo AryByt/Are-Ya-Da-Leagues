@@ -12,11 +12,21 @@ export default function TeamList() {
     getData();
   }, []);
   return (
-    <div className="bg-gray-400 flex-column wh-full">
+    <div className="bg-gray-400">
       {teams.map((team) => {
         return (
-          <div className="font-bold" key={team.id}>
-            <Link to={`/teams/${team.id}`}>{team.fields.team}</Link>
+          <div
+            className="font-bold flex-row p-9 justify-between items-center"
+            key={team.id}
+          >
+            <Link to={`/teams/${team.id}`}>
+              {team.fields.team}
+              <img
+                src={team.fields.logo}
+                alt=""
+                className="object-contain h-48 w-full ..."
+              />
+            </Link>
           </div>
         );
       })}
