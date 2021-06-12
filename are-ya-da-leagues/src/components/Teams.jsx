@@ -39,6 +39,7 @@ export default function Teams() {
           Here's the Team
           {team.fields?.info}
           <img className="bg-yellow-50" src={team.fields?.logo} alt="logo" />
+          // eslint-disable-next-line react/jsx-no-comment-textnodes
           <div>
             <StarPicker
               className=""
