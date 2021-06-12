@@ -2,6 +2,7 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
+import StarPicker from "react-star-picker";
 
 export default function Teams() {
   const history = useHistory();
@@ -23,6 +24,9 @@ export default function Teams() {
     console.log(res);
     history.push("/teams");
   };
+  const onChange = (value, name) => {
+    setTeam((prevValues) => ({ ...prevValues, [name]: value }));
+  };
 
   if (!team.fields) {
     return <div>Loading...</div>;
@@ -35,6 +39,15 @@ export default function Teams() {
           Here's the Team
           {team.fields?.info}
           <img className="bg-yellow-50" src={team.fields?.logo} alt="logo" />
+          <div>
+            <StarPicker
+              className=""
+              onChange={onChange}
+              value={team.fields?.rating}
+              name="rating"
+              numberStars={10}
+            />
+          </div>
         </h1>
         <p>{team.fields?.standing}</p>
       </div>
@@ -42,7 +55,6 @@ export default function Teams() {
       <p>{team.fields?.results}</p>
       <h1>Comments:</h1>
       <p>{team.fields?.comments}</p>
-      <h2>Rating:</h2>
       <Link to={`/edit/team/${team.id}`}>
         <br />
         Fix Your Team
