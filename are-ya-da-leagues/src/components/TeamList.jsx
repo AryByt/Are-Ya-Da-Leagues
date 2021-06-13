@@ -12,8 +12,8 @@ export default function TeamList() {
     getData();
   }, []);
   return (
-    <div className="min-h-screen">
-      <div className="bg-gray-400 object-contain flex-column justify-between items-center ">
+    <div className="min-h-screen ">
+      <div className="max-w-md mx-auto bg-gray-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         {teams.map((team) => {
           return (
             <div
