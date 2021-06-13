@@ -2,7 +2,7 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-//eslint-disable-next-line
+// eslint-disable-next-line react/jsx-no-comment-textnodes
 import StarPicker from "react-star-picker";
 
 export default function Teams() {
