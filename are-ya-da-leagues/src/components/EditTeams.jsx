@@ -51,35 +51,58 @@ export default function EditTeams() {
     history.push("/teams");
   };
   return (
-    <div>
-      <div>
-        <h2 class="bg-gradient-to-r from-green-400 to-blue-500 focus:from-pink-500 focus:to-yellow-500">
-          Edit team {input.team}
-        </h2>
-        <form onChange={handleChange} onSubmit={handleSubmit}>
-          <label>League name</label>
+    <div className="min-h-screen lg:text-5xl md:text-2xl sm:text-base">
+      <div className="flex justify-center items-center mt-5 mb-5 ">
+        <h2>Edit team {input.team}</h2>
+      </div>
+      <div className="flex justify-center items-center mt-4 ">
+        <form
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+          className="bg-gray-100 shadow-2xl rounded px-10 pt-10 pb-10 mb-4 "
+        >
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            League name
+          </label>
           <input type="text" name="league" value={input.league} />
           <br />
-          <label>Team Name</label>
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            Team Name
+          </label>
           <input type="text" name="team" value={input.team} />
           <br />
-          <label>Team logo</label>
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            Team logo
+          </label>
           <input type="text" name="logo" value={input.logo} />
-          <label>Rating</label>
-          <input type="text" name="rating" value={input.rating} />
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            Rating
+          </label>
+          <input
+            type="number"
+            name="rating"
+            placeholder="max is 10"
+            value={input.rating}
+          />
           <br />
-          <label>Team info</label>
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            Team info
+          </label>
           <input type="text" name="info" value={input.info} />
           <br />
-          <label>Comments</label>
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            Comments
+          </label>
           <input type="text" name="info" value={input.info} />
           <br />
-          <label>Results</label>
+          <label className="block text-gray-700 text-lg font-bold mb-2">
+            Results
+          </label>
           <input type="text" name="results" value={input.results} />
           <br />
           <button
             type="submit"
-            className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+            className="bg-red-500 hover:bg-red-700 text-white font-bold mt-3 py-7 px-7 rounded focus:outline-none focus:shadow-outline"
           >
             edit
           </button>

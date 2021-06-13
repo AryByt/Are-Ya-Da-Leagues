@@ -53,7 +53,7 @@ export default function Home() {
     </svg>
   );
   return (
-    <div className="md:flex justify-between py-20 px10 bg-red-200 mb-auto h-screen">
+    <div className="md:flex justify-between py-20 px10 bg-red-200 mb-auto">
       <div className=" md:w-1/2 mb-10 md:mb-0">
         <h1 className="md:text-4xl lg:text-6xl sm:text-sm text-3xl text-white mb-6">
           Welcome to Are Ya Da Football
