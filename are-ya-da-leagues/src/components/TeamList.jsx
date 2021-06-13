@@ -13,13 +13,16 @@ export default function TeamList() {
   }, []);
   return (
     <div className="min-h-screen">
-      <div className="bg-gray-400 flex justify-between items-center">
+      <div className="bg-gray-400 object-contain flex-column justify-between items-center ">
         {teams.map((team) => {
           return (
-            <div className="" key={team.id}>
+            <div
+              className=" w-1/12 flex items-center justify-center m-auto p-2"
+              key={team.id}
+            >
               <Link to={`/teams/${team.id}`}>
                 {team.fields.team}
-                <img src={team.fields.logo} alt="" className="w-screen h-40" />
+                <img src={team.fields.logo} alt="" />
               </Link>
             </div>
           );

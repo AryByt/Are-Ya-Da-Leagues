@@ -35,7 +35,7 @@ export default function AddingTeams() {
 
   return (
     <div className="min-h-screen">
-      <h1 className="text-red-900 flex-shrink md:text-2xl sm:text-lg justify-start shadow-2xl rounded px-5 pt-5 pb-5 mb-8 bg-red-300">
+      <h1 className="text-red-900 flex-shrink md:text-2xl sm:text-lg justify-start shadow-2xl rounded px-5 pt-5 pb-5 mt-3 mb-8 bg-red-300">
         create your team! add it to the list!
       </h1>
       <div className="flex items-center justify-center">
@@ -49,27 +49,27 @@ export default function AddingTeams() {
           className="bg-gray-100 shadow-2xl rounded px-10 pt-10 pb-10 mb-4 "
         >
           <label className="block text-gray-700 text-lg font-bold mb-2">
-            League name
+            League name:
           </label>
           <input type="text" name="league" />
 
           <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
-            Team Name
+            Team Name:
           </label>
           <input type="text" name="team" />
 
           <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
-            Team logo
+            Team logo:
           </label>
-          <input type="text" name="logo" />
+          <input type="text" name="logo" placeholder="please enter a URL" />
 
           <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
-            standing
+            Standing:
           </label>
           <input type="text" name="standing" />
 
           <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
-            Team info
+            Team info:
           </label>
           <input type="text" name="info" />
 
@@ -83,7 +83,7 @@ export default function AddingTeams() {
           </label>
           <textarea type="text" name="comments"></textarea>
           <label className="block text-gray-700 text-lg font-bold mb-2">
-            RATE
+            Rate:
           </label>
           <input type="number" name="rating" />
           <br />
