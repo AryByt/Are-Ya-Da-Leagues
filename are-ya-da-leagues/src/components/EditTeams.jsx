@@ -65,12 +65,12 @@ export default function EditTeams() {
           <label className="block text-gray-700 text-lg font-bold mt-3">
             League name
           </label>
-          <input type="url" name="country" value={input.league} />
+          <input type="text" name="league" value={input.league} />
           <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             League logo
           </label>
-          <input type="text" name="league" value={input.country} />
+          <input type="url" name="country" value={input.country} />
           <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             Team Name

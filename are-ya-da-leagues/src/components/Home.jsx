@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Home() {
   const [readMore, setReadMore] = useState(false);
   const extraContent = (
-    <p>
+    <p className="text-gray-400">
       Soccer is a game played by two teams with 11 players each on a field with
       a goal for each team. It’s the most popular team sport on the planet, a
       fast-paced game with few breaks and one simple aim — to score a goal. On
@@ -16,6 +16,7 @@ export default function Home() {
         href="https://www.dummies.com/sports/soccer/soccer-for-dummies-cheat-sheet/#:~:text=Soccer%20is%20a%20game%20played,on%20others%2C%20it's%20called%20soccer."
         target="_blank"
         rel="noreferrer"
+        className="text-red-500"
       >
         Here
       </a>
@@ -53,17 +54,19 @@ export default function Home() {
     </svg>
   );
   return (
-    <div className="md:flex justify-between py-20 px10 bg-red-200 mb-auto min-h-screen">
-      <div className=" md:w-1/2 mb-10 md:mb-0">
-        <h1 className="md:text-4xl lg:text-6xl sm:text-sm text-3xl text-white mb-6">
-          Welcome to Are Ya Da Football
-        </h1>
-        <p className=" text-2xl mb-6 text-gray-50">
+    <div className="md:flex justify-between py-20 px10 bg-red-300 mb-auto min-h-screen">
+      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <h1 className="md:flex-shrink-0">Welcome to Are Ya Da Football</h1>
+        <p className=" text-2xl mb-6 text-gray-500">
           It's the Home of Football more about leagues teams and how football is
           played{" "}
         </p>
+        <img
+          src=" https://images.daznservices.com/di/library/GOAL_INTERNATIONAL/92/f9/david-beckham-real-madrid_yo9701762qkxzaksdwnz0q3s.jpg?t=-317109824&w=800&h=600"
+          alt=""
+        />
         <button
-          className="px-3 py-3 text-lg bg-yellow-400 text-yellow-800 hover:bg-yellow-300 rounded"
+          className="px-5 py-3 md:ml-0 md:-mb-5 text-lg bg-yellow-400 text-yellow-800 hover:bg-yellow-300 rounded-lg -mb-5"
           onClick={() => {
             setReadMore(!readMore);
           }}
@@ -75,14 +78,14 @@ export default function Home() {
         </article>
       </div>
 
-      <div className=" md:w-1/2 mb-10 md:mb-0">
+      <div className=" md:w-1/2 mb-5 md:mb-0 max-w-md mx-auto bg-blue-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-5">
         <img
-          className="w-full rounded shadow-2xl "
+          className="w-full rounded shadow-2xl mt-20 lg:-ml-8"
           src="https://img.uefa.com/imgml/uefacom/ucl/social/og-default.jpg"
           alt=""
         />
         <a
-          className="inline-block px-6 py-3 text-lg bg-blue-400 text-blue-800 hover:to-blue-300 rounded "
+          className="inline-block px-6 py-3 text-lg bg-blue-400 text-blue-800 hover:to-blue-300 rounded mt-3 ml-32 lg:ml-72 "
           href="https://www.uefa.com/uefachampionsleague/"
           target="_blank"
           rel="noreferrer"

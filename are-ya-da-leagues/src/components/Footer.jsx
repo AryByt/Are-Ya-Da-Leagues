@@ -2,9 +2,27 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div>
-      <div className="flex-column justify-between items-center bg-black text-white p-10  mt-auto">
-        <h1>footer</h1>{" "}
+    <div className=" bg-black text-white p-1 mt-auto flex justify-between items-center">
+      <div>
+        <img
+          className="h-16 rounded-full "
+          src="https://pbs.twimg.com/profile_images/913790926950096896/xt2OyAdt.jpg"
+          alt=""
+        />
+
+        <a href="https://airtable.com/" target="_blank" rel="noreferrer">
+          Airtable
+        </a>
+      </div>
+      <div>
+        <img
+          className="h-16 rounded-full"
+          src=" https://avatars.githubusercontent.com/u/9919?s=280&v=4"
+          alt=""
+        />
+        <a href="https://github.com/AryByt" target="_blank" rel="noreferrer">
+          GitHub
+        </a>
       </div>
     </div>
   );
