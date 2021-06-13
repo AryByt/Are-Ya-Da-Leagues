@@ -30,6 +30,7 @@ export default function EditTeams() {
         results: res.fields.results,
         players: res.fields.players,
         standing: res.fields.standing,
+        country: res.fields.country,
       });
     };
     fetchData();
@@ -53,7 +54,7 @@ export default function EditTeams() {
   return (
     <div className="min-h-screen lg:text-5xl md:text-2xl sm:text-base">
       <div className="flex justify-center items-center mt-5 mb-5 ">
-        <h2>Edit team {input.team}</h2>
+        <h2>Edit {input.team}</h2>
       </div>
       <div className="flex justify-center items-center mt-4 ">
         <form
@@ -61,21 +62,26 @@ export default function EditTeams() {
           onSubmit={handleSubmit}
           className="bg-gray-100 shadow-2xl rounded px-10 pt-10 pb-10 mb-4 "
         >
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-3">
             League name
           </label>
-          <input type="text" name="league" value={input.league} />
+          <input type="url" name="country" value={input.league} />
           <br />
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-3">
+            League logo
+          </label>
+          <input type="text" name="league" value={input.country} />
+          <br />
+          <label className="block text-gray-700 text-lg font-bold mt-3">
             Team Name
           </label>
           <input type="text" name="team" value={input.team} />
           <br />
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-3">
             Team logo
           </label>
           <input type="text" name="logo" value={input.logo} />
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-3">
             Rating
           </label>
           <input
@@ -85,17 +91,17 @@ export default function EditTeams() {
             value={input.rating}
           />
           <br />
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-3">
             Team info
           </label>
           <input type="text" name="info" value={input.info} />
           <br />
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-3">
             Comments
           </label>
           <input type="text" name="info" value={input.info} />
           <br />
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold  mt-3">
             Results
           </label>
           <input type="text" name="results" value={input.results} />

@@ -13,6 +13,7 @@ const defaultObj = {
   results: "",
   players: "",
   rating: "",
+  country: "",
 };
 
 export default function AddingTeams() {
@@ -53,39 +54,44 @@ export default function AddingTeams() {
           </label>
           <input type="text" name="league" />
 
-          <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
+          <label className="block text-gray-700 text-lg font-bold  mt-2">
+            League logo
+          </label>
+          <input type="url" name="country" placeholder="please enter a URL" />
+
+          <label className="block text-gray-700 text-lg font-bold  mt-2">
             Team Name:
           </label>
           <input type="text" name="team" />
 
-          <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
+          <label className="block text-gray-700 text-lg font-bold  mt-2">
             Team logo:
           </label>
           <input type="text" name="logo" placeholder="please enter a URL" />
 
-          <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
+          <label className="block text-gray-700 text-lg font-bold  mt-2">
             Standing:
           </label>
           <input type="text" name="standing" />
 
-          <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
+          <label className="block text-gray-700 text-lg font-bold  mt-2">
             Team info:
           </label>
           <input type="text" name="info" />
 
-          <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
+          <label className="block text-gray-700 text-lg font-bold  mt-2">
             Who are your Favorite Players?
           </label>
           <input type="text" name="players" />
 
-          <label className="block text-gray-700 text-lg font-bold mb-2 mt-2">
+          <label className="block text-gray-700 text-lg font-bold mt-2">
             Comments:
           </label>
           <textarea type="text" name="comments"></textarea>
-          <label className="block text-gray-700 text-lg font-bold mb-2">
+          <label className="block text-gray-700 text-lg font-bold mt-2">
             Rate:
           </label>
-          <input type="number" name="rating" />
+          <input type="number" name="rating" placeholder="max is 10" />
           <br />
           <button
             type="submit"
