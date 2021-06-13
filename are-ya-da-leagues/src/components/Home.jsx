@@ -53,7 +53,7 @@ export default function Home() {
     </svg>
   );
   return (
-    <div className="md:flex justify-between py-20 px10 bg-red-300">
+    <div className="md:flex justify-between py-20 px10 bg-red-200 mb-auto h-screen">
       <div className=" md:w-1/2 mb-10 md:mb-0">
         <h1 className="md:text-4xl lg:text-6xl sm:text-sm text-3xl text-white mb-6">
           Welcome to Are Ya Da Football
@@ -63,14 +63,14 @@ export default function Home() {
           played{" "}
         </p>
         <button
-          className="inline-block px-3 py-3 text-lg bg-yellow-400 text-yellow-800 hover:bg-yellow-300 rounded"
+          className="px-3 py-3 text-lg bg-yellow-400 text-yellow-800 hover:bg-yellow-300 rounded"
           onClick={() => {
             setReadMore(!readMore);
           }}
         >
           <p>read{linkName}</p>
         </button>
-        <article className="inline-block py-5 text-lg">
+        <article className="py-5 md:text-2xl px-1 object-contain text-white ">
           {readMore && extraContent}
         </article>
       </div>
@@ -78,7 +78,7 @@ export default function Home() {
       <div className=" md:w-1/2 mb-10 md:mb-0">
         <img
           className="w-full rounded shadow-2xl "
-          src="https://pbs.twimg.com/media/EWthnCKWAAEnQWg.jpg"
+          src="https://img.uefa.com/imgml/uefacom/ucl/social/og-default.jpg"
           alt=""
         />
         <a

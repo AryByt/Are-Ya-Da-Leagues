@@ -12,7 +12,7 @@ export default function Leagues() {
     getData();
   }, []);
   return (
-    <div>
+    <div className="min-h-screen">
       {leagues.map((league) => {
         return (
           <div key={league.id}>

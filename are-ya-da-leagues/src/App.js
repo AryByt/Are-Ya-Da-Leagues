@@ -33,6 +33,11 @@ function App() {
   return (
     <div className="App">
       <Navbar toggle={toggle} />
+      <img
+        className="opacity-30 overflow-hidden object-contain md:hidden"
+        src="https://thefootballlovers.com/wp-content/uploads/2020/12/top-50-football-leagues.jpg"
+        alt=""
+      />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Switch>
         <Route path="/leagues">
@@ -52,6 +57,7 @@ function App() {
         </Route>
         <Route path="/team/:id"></Route>
         <Home />
+
         <Route path="/"></Route>
       </Switch>
       <Footer />

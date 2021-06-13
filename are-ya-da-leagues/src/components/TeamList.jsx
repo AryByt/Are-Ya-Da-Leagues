@@ -12,24 +12,19 @@ export default function TeamList() {
     getData();
   }, []);
   return (
-    <div className="bg-gray-400">
-      {teams.map((team) => {
-        return (
-          <div
-            className="font-bold flex-row p-9 justify-between items-center"
-            key={team.id}
-          >
-            <Link to={`/teams/${team.id}`}>
-              {team.fields.team}
-              <img
-                src={team.fields.logo}
-                alt=""
-                className="object-contain h-48 w-full ..."
-              />
-            </Link>
-          </div>
-        );
-      })}
+    <div className="min-h-screen">
+      <div className="bg-gray-400 flex justify-between items-center">
+        {teams.map((team) => {
+          return (
+            <div className="" key={team.id}>
+              <Link to={`/teams/${team.id}`}>
+                {team.fields.team}
+                <img src={team.fields.logo} alt="" className="w-screen h-40" />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
