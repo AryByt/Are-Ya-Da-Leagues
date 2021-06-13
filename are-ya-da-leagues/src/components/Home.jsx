@@ -53,32 +53,42 @@ export default function Home() {
     </svg>
   );
   return (
-    <div className="bg-gray-100 flex justify-between py-20 px-10 ">
-      <div className="">
-        <div className="">
-          <h1 className="">
-            Welcome to Are Ya Da Football{" "}
-            <span className="">It's the Home of Football</span> learn more about
-            leagues teams and how football is played
-            <img
-              className="py-4 object-cover "
-              src="https://pbs.twimg.com/media/EWthnCKWAAEnQWg.jpg"
-              alt=""
-            />
-          </h1>
-          <div>
-            <button
-              className="py-3 px-10 bg-red-500 rounded-full text-xl hover:bg-red-300 flex "
-              onClick={() => {
-                setReadMore(!readMore);
-              }}
-            >
-              <p>read here{linkName}</p>
-            </button>
-            <article>{readMore && extraContent}</article>
-          </div>
-        </div>
-        <div></div>
+    <div className="md:flex justify-between py-20 px10 bg-red-300">
+      <div className=" md:w-1/2 mb-10 md:mb-0">
+        <h1 className="md:text-4xl lg:text-6xl sm:text-sm text-3xl text-white mb-6">
+          Welcome to Are Ya Da Football
+        </h1>
+        <p className=" text-2xl mb-6 text-gray-50">
+          It's the Home of Football more about leagues teams and how football is
+          played{" "}
+        </p>
+        <button
+          className="inline-block px-3 py-3 text-lg bg-yellow-400 text-yellow-800 hover:bg-yellow-300 rounded"
+          onClick={() => {
+            setReadMore(!readMore);
+          }}
+        >
+          <p>read{linkName}</p>
+        </button>
+        <article className="inline-block py-5 text-lg">
+          {readMore && extraContent}
+        </article>
+      </div>
+
+      <div className=" md:w-1/2 mb-10 md:mb-0">
+        <img
+          className="w-full rounded shadow-2xl "
+          src="https://pbs.twimg.com/media/EWthnCKWAAEnQWg.jpg"
+          alt=""
+        />
+        <a
+          className="inline-block px-6 py-3 text-lg bg-blue-400 text-blue-800 hover:to-blue-300 rounded "
+          href="https://www.uefa.com/uefachampionsleague/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          UEFA
+        </a>
       </div>
     </div>
   );
