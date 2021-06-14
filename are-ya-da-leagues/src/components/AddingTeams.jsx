@@ -37,7 +37,7 @@ export default function AddingTeams() {
   return (
     <div className="min-h-screen">
       <h1 className="text-red-900 flex-shrink md:text-2xl sm:text-lg justify-start shadow-2xl rounded px-5 pt-5 pb-5 mt-3 mb-8 bg-red-300">
-        create your team! add it to the list!
+        Create your team! Add it to the list!
       </h1>
       <div className="flex items-center justify-center">
         <p> Name: {input.team}</p>
@@ -47,7 +47,7 @@ export default function AddingTeams() {
         <form
           onChange={handleChange}
           onSubmit={handleSubmit}
-          className="bg-gray-100 shadow-2xl rounded px-10 pt-10 pb-10 mb-4 "
+          className="bg-gray-100 shadow-2xl rounded px-10 pt-10 pb-10 mb-4 font-mono"
         >
           <label className="block text-gray-700 text-lg font-bold mb-2">
             League name:

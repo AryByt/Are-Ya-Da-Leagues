@@ -8,7 +8,7 @@ const config = {
   },
 };
 
-export const getLeagues = async () => {
+export const fetchData = async () => {
   try {
     const res = await axios.get(baseURL, config);
     return res.data.records;

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { getLeagues } from "../services/api";
+import { fetchData } from "../services/api";
 import { Link } from "react-router-dom";
 export default function TeamList() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const res = await getLeagues();
+      const res = await fetchData();
       setTeams(res);
     };
     getData();

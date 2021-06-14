@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <Navbar toggle={toggle} />
       <img
-        className="opacity-30 overflow-hidden object-contain md:hidden"
+        className="opacity-30 overflow-hidden object-contain md:hidden ls:hidden"
         src="https://thefootballlovers.com/wp-content/uploads/2020/12/top-50-football-leagues.jpg"
         alt=""
       />

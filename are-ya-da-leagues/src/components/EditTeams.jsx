@@ -52,8 +52,8 @@ export default function EditTeams() {
     history.push("/teams");
   };
   return (
-    <div className="min-h-screen lg:text-5xl md:text-2xl sm:text-base">
-      <div className="flex justify-center items-center mt-5 mb-5 ">
+    <div className="min-h-screen lg:text-4xl md:text-2xl sm:text-base font-mono">
+      <div className="text-red-900 flex-shrink md:text-2xl sm:text-lg rounded px-3 pt-3 pb-3 bg-red-300">
         <h2>Edit {input.team}</h2>
       </div>
       <div className="flex justify-center items-center mt-4 ">
@@ -66,17 +66,14 @@ export default function EditTeams() {
             League name
           </label>
           <input type="text" name="league" value={input.league} />
-          <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             League logo
           </label>
           <input type="url" name="country" value={input.country} />
-          <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             Team Name
           </label>
           <input type="text" name="team" value={input.team} />
-          <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             Team logo
           </label>
@@ -90,17 +87,14 @@ export default function EditTeams() {
             placeholder="max is 10"
             value={input.rating}
           />
-          <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             Team info
           </label>
           <input type="text" name="info" value={input.info} />
-          <br />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             Comments
           </label>
           <input type="text" name="info" value={input.info} />
-          <br />
           <label className="block text-gray-700 text-lg font-bold  mt-3">
             Results
           </label>

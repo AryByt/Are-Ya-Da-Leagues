@@ -9,7 +9,6 @@ export default function Teams() {
   const history = useHistory();
   const [team, setTeam] = useState({});
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     const fetch = async () => {
@@ -44,20 +43,19 @@ export default function Teams() {
           // eslint-disable-next-line react/jsx-no-comment-textnodes
         />
         <StarPicker
-          className=""
-          onChange={onChange}
-          value={team.fields?.rating}
+          placeholder={team.fields?.rating}
           name="rating"
           numberStars={10}
         />
       </div>
-      <div className="text-gray-500 md:mb-5 md:mt-3 md:p-4 lg:mb-0 border bg-gray-200">
-        <p className="">
-          {team.fields?.standing}
+      <div className="text-gray-500 md:mb-5 md:m-3 md:p-4 lg:mb-0 border bg-gray-200">
+        <section className="">
+          League Position:{team.fields?.standing}
           <br />
-          <p className="">{team.fields?.results}</p>
-        </p>
+          <p className=""> Last Five Games:{team.fields?.results}</p>
+        </section>
         <br />
+        <h3>Favorite Players:</h3>
         <p className="">{team.fields?.players}</p>
         <p className="">{team.fields?.comments}</p>
       </div>
@@ -65,14 +63,14 @@ export default function Teams() {
       <div>
         <Link
           to={`/edit/team/${team.id}`}
-          className="bg-gray-400 hover:bg-gray-700 text-white font-bold p-3  rounded focus:outline-none focus:shadow-outline justify-between  "
+          className="bg-gray-400 hover:bg-gray-700 text-white font-bold p-3 rounded focus:outline-none focus:shadow-outline md:m-3 flex"
         >
-          Fix Your Team
+          <p>Fix Your Team</p>
         </Link>
 
         <button
           onClick={handleDelete}
-          className="bg-red-500 hover:bg-red-700 text-white font-bold p-5 rounded focus:outline-none focus:shadow-outline"
+          className="bg-red-500 hover:bg-red-700 text-white font-bold p-5 md:m-3 rounded focus:outline-none focus:shadow-outline flex justify-end"
         >
           Delete
         </button>

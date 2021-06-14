@@ -14,6 +14,7 @@ export default function Footer() {
           Airtable
         </a>
       </div>
+      <h1> ©Arya Bayati</h1>
       <div>
         <img
           className="h-16 rounded-full"
