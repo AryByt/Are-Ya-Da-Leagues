@@ -92,12 +92,12 @@ export default function AddingTeams() {
             Rate:
           </label>
           <input type="number" name="rating" placeholder="max is 10" />
-          <br />
+
           <button
             type="submit"
             className="bg-red-500 hover:bg-red-700 text-white font-bold mt-3 py-7 px-7 rounded focus:outline-none focus:shadow-outline"
           >
-            Submit
+            SUBMIT
           </button>
         </form>
       </div>

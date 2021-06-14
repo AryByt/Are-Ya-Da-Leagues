@@ -2,10 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { editTeam, getTeam } from "../services/api";
-import StarPicker from "react-star-picker";
 
 export default function EditTeams() {
   const history = useHistory();
+  const { id } = useParams();
   const [input, setInput] = useState({
     league: "",
     team: "",
@@ -16,8 +16,6 @@ export default function EditTeams() {
     results: "",
     players: "",
   });
-
-  const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,9 +50,7 @@ export default function EditTeams() {
     console.log(res);
     history.push("/teams");
   };
-  const onChange = (value, name) => {
-    setInput((prevValues) => ({ ...prevValues, [name]: value }));
-  };
+
   return (
     <div className="min-h-screen lg:text-4xl md:text-2xl sm:text-base font-mono">
       <div className="text-red-900 flex-shrink md:text-2xl sm:text-lg rounded px-3 pt-3 pb-3 bg-red-300">
@@ -82,7 +78,15 @@ export default function EditTeams() {
             Team logo
           </label>
           <input type="text" name="logo" value={input.logo} />
-
+          <label className="block text-gray-700 text-lg font-bold mt-3">
+            Rating
+          </label>
+          <input
+            type="number"
+            name="rating"
+            placeholder="max is 10"
+            value={input.rating}
+          />
           <label className="block text-gray-700 text-lg font-bold mt-3">
             Team info
           </label>
@@ -95,19 +99,12 @@ export default function EditTeams() {
             Results
           </label>
           <input type="text" name="results" value={input.results} />
-          <label className="block text-gray-700 font-bold mt-3">Rating:</label>
-          <StarPicker
-            onChange={onChange}
-            value={input.rating}
-            name="rating"
-            numberStars={10}
-          />
           <br />
           <button
             type="submit"
             className="bg-red-500 hover:bg-red-700 text-white font-bold mt-3 py-7 px-7 rounded focus:outline-none focus:shadow-outline"
           >
-            edit
+            EDIT
           </button>
         </form>
       </div>

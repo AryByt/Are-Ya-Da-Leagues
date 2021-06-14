@@ -2,8 +2,6 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-// eslint-disable-next-line react/jsx-no-comment-textnodes
-import StarPicker from "react-star-picker";
 
 export default function Teams() {
   const history = useHistory();
@@ -37,13 +35,8 @@ export default function Teams() {
           height="500"
           src={team.fields?.logo}
           alt="logo"
-          // eslint-disable-next-line react/jsx-no-comment-textnodes
         />
-        <StarPicker
-          value={team.fields?.rating}
-          name="rating"
-          numberStars={10}
-        />
+        <p>Team Rating:{team.fields?.rating}</p>
       </div>
       <div className="text-gray-500 md:mb-5 md:m-3 md:p-4 lg:mb-0 border bg-gray-200">
         <section className="">
@@ -56,7 +49,6 @@ export default function Teams() {
         <p className="">{team.fields?.players}</p>
         <p className="">{team.fields?.comments}</p>
       </div>
-
       <div>
         <Link
           to={`/edit/team/${team.id}`}
@@ -69,7 +61,7 @@ export default function Teams() {
           onClick={handleDelete}
           className="bg-red-500 hover:bg-red-700 text-white font-bold p-5 md:m-3 rounded focus:outline-none focus:shadow-outline flex justify-end"
         >
-          Delete
+          DELETE
         </button>
       </div>
     </div>

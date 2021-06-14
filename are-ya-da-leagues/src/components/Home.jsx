@@ -56,7 +56,9 @@ export default function Home() {
   return (
     <div className="md:flex justify-between py-20 px10 bg-red-300 mb-auto min-h-screen font-mono">
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <h1 className="md:flex-shrink-0">Welcome to Are Ya Da Football</h1>
+        <h1 className="md:flex-shrink-0 text-2xl m-1">
+          Welcome to Are Ya Da Football
+        </h1>
         <p className=" text-2xl mb-6 text-gray-500">
           It's the Home of Football more about leagues teams and how football is
           played{" "}
@@ -79,7 +81,7 @@ export default function Home() {
       </div>
       <div className=" md:w-1/2 mb-5 md:mb-0 max-w-md mx-auto bg-blue-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-5">
         <img
-          className="w-full rounded shadow-2xl mt-20 lg:-ml-8"
+          className="w-full rounded shadow-2xl mt-20 "
           src="https://img.uefa.com/imgml/uefacom/ucl/social/og-default.jpg"
           alt=""
         />
