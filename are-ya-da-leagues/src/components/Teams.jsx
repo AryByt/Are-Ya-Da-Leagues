@@ -2,8 +2,6 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
-// eslint-disable-next-line react/jsx-no-comment-textnodes
-import StarPicker from "react-star-picker";
 
 export default function Teams() {
   const history = useHistory();
@@ -22,9 +20,6 @@ export default function Teams() {
     await deleteTeam(id);
     history.push("/teams");
   };
-  const onChange = (value, name) => {
-    setTeam((prevValues) => ({ ...prevValues, [name]: value }));
-  };
 
   if (!team.fields) {
     return <div>Loading...</div>;
@@ -40,13 +35,8 @@ export default function Teams() {
           height="500"
           src={team.fields?.logo}
           alt="logo"
-          // eslint-disable-next-line react/jsx-no-comment-textnodes
         />
-        <StarPicker
-          placeholder={team.fields?.rating}
-          name="rating"
-          numberStars={10}
-        />
+        <p>Team Ranking is:{team.fields?.rating}</p>
       </div>
       <div className="text-gray-500 md:mb-5 md:m-3 md:p-4 lg:mb-0 border bg-gray-200">
         <section className="">
