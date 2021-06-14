@@ -35,7 +35,7 @@ export default function AddingTeams() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-mono">
       <h1 className="text-red-900 flex-shrink md:text-2xl sm:text-lg justify-start shadow-2xl rounded px-5 pt-5 pb-5 mt-3 mb-8 bg-red-300">
         Create your team! Add it to the list!
       </h1>

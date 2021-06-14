@@ -2,6 +2,8 @@ import React from "react";
 import { deleteTeam, getTeam } from "../services/api";
 import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
+// eslint-disable-next-line react/jsx-no-comment-textnodes
+import StarPicker from "react-star-picker";
 
 export default function Teams() {
   const history = useHistory();
@@ -26,7 +28,7 @@ export default function Teams() {
   }
 
   return (
-    <div className=" min-h-screen bg-gray-300 ">
+    <div className=" min-h-screen bg-gray-300 font-mono">
       <div className="p-6 hover:bg-gray-600 hover:text-white transition duration-300 ease-in flex-row justify-between items-center">
         {team.fields?.info}
         <img
@@ -35,8 +37,13 @@ export default function Teams() {
           height="500"
           src={team.fields?.logo}
           alt="logo"
+          // eslint-disable-next-line react/jsx-no-comment-textnodes
         />
-        <p>Team Ranking is:{team.fields?.rating}</p>
+        <StarPicker
+          value={team.fields?.rating}
+          name="rating"
+          numberStars={10}
+        />
       </div>
       <div className="text-gray-500 md:mb-5 md:m-3 md:p-4 lg:mb-0 border bg-gray-200">
         <section className="">

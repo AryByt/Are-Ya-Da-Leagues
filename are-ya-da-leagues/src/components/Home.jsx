@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Home() {
   const [readMore, setReadMore] = useState(false);
   const extraContent = (
-    <p className="text-gray-400">
+    <p className="text-gray-400 font-mono">
       Soccer is a game played by two teams with 11 players each on a field with
       a goal for each team. It’s the most popular team sport on the planet, a
       fast-paced game with few breaks and one simple aim — to score a goal. On
@@ -54,7 +54,7 @@ export default function Home() {
     </svg>
   );
   return (
-    <div className="md:flex justify-between py-20 px10 bg-red-300 mb-auto min-h-screen">
+    <div className="md:flex justify-between py-20 px10 bg-red-300 mb-auto min-h-screen font-mono">
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <h1 className="md:flex-shrink-0">Welcome to Are Ya Da Football</h1>
         <p className=" text-2xl mb-6 text-gray-500">
@@ -77,7 +77,6 @@ export default function Home() {
           {readMore && extraContent}
         </article>
       </div>
-
       <div className=" md:w-1/2 mb-5 md:mb-0 max-w-md mx-auto bg-blue-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl mt-5">
         <img
           className="w-full rounded shadow-2xl mt-20 lg:-ml-8"

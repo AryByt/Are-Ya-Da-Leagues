@@ -2,14 +2,13 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className=" bg-black text-white p-1 mt-auto flex justify-between items-center">
+    <div className=" bg-black text-white p-1 mt-auto flex justify-between items-center font-mono">
       <div>
         <img
           className="h-16 rounded-full "
           src="https://pbs.twimg.com/profile_images/913790926950096896/xt2OyAdt.jpg"
           alt=""
         />
-
         <a href="https://airtable.com/" target="_blank" rel="noreferrer">
           Airtable
         </a>

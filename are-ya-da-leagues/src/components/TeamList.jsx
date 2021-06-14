@@ -12,7 +12,7 @@ export default function TeamList() {
     getData();
   }, []);
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen font-mono ">
       <div className="max-w-md mx-auto bg-gray-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         {teams.map((team) => {
           return (
