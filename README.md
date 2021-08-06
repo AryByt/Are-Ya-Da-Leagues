@@ -4,6 +4,10 @@
 
 Are Ya Da Leagues
 
+## Deployed to Netlify 
+
+https://sleepy-keller-6d7a40.netlify.app/
+
 ## Project Description
 
 A soccer blog where you can discuss how a specific team is doing and see some of their top players and their league standings.You can view the results of their last few games.You can also see some information about the clubs and a link to their official websites.You can aslo add your soccer team and your top players.You can discussing how your team is doing and talk about everything soccer.
